@@ -1,8 +1,9 @@
 package guru.sfg.common.events;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -10,11 +11,12 @@ import java.io.Serializable;
  * Created by marecm on 4/27/2021
  */
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class BeerEvent implements Serializable {
 
     static final long serialVersionUID = 4129804180705537841L;
 
-    private final BeerDto beerDto;
+    private BeerDto beerDto;
 }
